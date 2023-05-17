@@ -10,23 +10,53 @@
             margin: 0;
             padding: 0;
         }
-        .cuadrado{
+        .barra{
             width: 100%;
             height: 100px;
             border: 1px solid black;
             background-color:#d4a833;
+            display: inline-block;
+            position: relative;
         }
 
+        .imagen{
+            width: 100px;
+            padding: 5px 10px 10px 10px;
+        }
+
+        .imagen:hover{
+            width: 150px;
+        }
+
+        .boton{
+            width: 100px;
+            height: 45px;
+            position: absolute;
+            right: 10%;
+            top: 31px;
+        }
+
+        .numero2{
+            right: 35%;
+        }
+
+        .texto{
+            font-size: 100px;
+        }
         
     </style>
 </head>
-<body>
+
     <header>
-        <div class="cuadrado" >
-            <h1>Hola mundo, juanjo cariño</h1>
+
+        <div class="barra navegacion" >        
+            <img class="imagen" src="imagenes/tabletImagen.jpg">
+            <button class="boton numero1">Botón</button>
+            <button class="boton numero2">Botón 2</button>
         </div>
         
     </header>
-    
+ <body>   
+    <p class="texto"> UWU </p>
 </body>
 </html>
