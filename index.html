@@ -5,8 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .border_cab{
+            display: flex;
+            border-bottom: 3px solid red;
+            padding: 10px 50px;
+            
+        }
+        .prueba{
+            width: auto;
+            font-size: 40px;
+        }
+        @media all and (min-width: 950px){
+            .prueba{
+                width: auto;
+                font-size: 80px;
+                transition: font-size 1s ease-in;
+            }
+        }
+        .ft{
+            border-top: 1px solid lightgray;
+            border:  50% ;
+            text-align: center;
+            padding-top: 5%;
+        }
+        .div_principal{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+           margin: 100px 50px;
+           gap: 15px;
+        }
+        .div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            overflow: auto;
+            border: 1px solid black ;
+            height: 70px;
+            width: 70px;
+        }
+        .div:hover{
+            width: 100px;
+            height: 100px;
+            transition: width 0.10s linear;
+            transition: height 0.10s linear;
+        }
+        .uno{
+            order: 1;
+        }
+        .dos{
+            order: 2;
+        }
+        .tres{
+            order: 3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <header class="border_cab">
+        <h1 class="prueba">Hola mundo</h1>
+    </header>
+    <div class="div_principal">
+     <div class="div uno">
+            prueba
+        </div>
+     <div class="div dos">
+           prueba 2
+        </div>
+        <div class="div tres">
+        prueba 3
+    </div>
+    </div>
+    <footer class="ft">
+        <p>Footer de prueba</p>
+    </footer>
 </body>
 </html>
