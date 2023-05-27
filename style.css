@@ -1,63 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.border_cab{
-    display: flex;
-    border-bottom: 3px solid red;
-    padding: 10px 50px;
-    
+html {
+    height: 100%;    
 }
-.prueba{
-    width: auto;
-    font-size: 40px;
-}
-@media all and (min-width: 950px){
-    .prueba{
-        width: auto;
-        font-size: 80px;
-        transition: font-size 1s ease-in;
-    }
-}
-.ft{
-    border-top: 1px solid lightgray;
-    border:  50% ;
-    text-align: center;
-    padding-top: 5%;
-}
-.div_principal{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-   margin: 100px 50px;
-   gap: 15px;
-}
-.div{
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    overflow: auto;
-    border: 1px solid black ;
-    height: 70px;
-    width: 70px;
+    min-height: 100%;    
 }
-.div:hover{
-    width: 100px;
-    height: 100px;
-    transition: width 0.10s linear;
-    transition: height 0.10s linear;
+footer {
+    margin-top: auto;
 }
-.uno{
-    order: 1;
+/* ↑ Líneas esenciales ↑ */
+
+/* ↓ Header ↓ */
+header{
+    background-color: aquamarine;
+    height: 80px;
+    border-bottom: 3px solid tomato;
 }
-.dos{
-    order: 2;
+
+/* ↓ Main ↓*/
+main{
+    background: linear-gradient(150deg,rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
+    height: calc(100vh - (170px + 80px));
 }
-.tres{
-    order: 3;
+.tarjetas{
+    display: flex;       
+    gap: 15px;
+    justify-content: center;
+    margin-top: 200px;        
+    
+}
+
+.tarjeta-acceso{
+    width: 100%;
+}
+
+.contenerdor-tarjeta{
+    max-width: 320px;
+}
+
+/* ↓ Footer ↓ */
+
+footer{
+    height: 170px;
+    background-color: aquamarine;
+    border-top: 3px solid tomato;
+}
+
+/* ↓ Media Queries ↓ */
+@media screen and (max-width: 768px){
+    .tarjetas{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    main{
+        background: linear-gradient(#87CEEB 25%, #1E90FF, #87CEEB 80%);
+        height: 100%;
+    }
+    
 }
