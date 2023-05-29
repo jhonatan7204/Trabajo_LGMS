@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    overflow: hidden;
 }
 
 footer {
@@ -23,41 +24,42 @@ footer {
 header {
     background-color: aquamarine;
     height: 100px;
-    border-bottom: 3px solid tomato;
-    display: inline-block;
-    position: relative;
+    border-bottom: 3px solid black;
+    background-image: url("imágenes/fondoBarra.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+}
+
+.barra.navegacion{
+    height: 100px;
+    display: flex;
+}
+
+.texto.navegacion{
+    padding-top: 25px;
+    margin-right: 10px;
 }
 
 .imagen{
     width: 100px;
     padding: 5px 10px 10px 10px;
-    margin: px solid black;
-}
-
-.imagen:hover{
-    width: 150px;
 }
 
 .boton{
     width: 100px;
     height: 100px;
-    position: absolute;
-    right: 15%;
-
+    margin-right: 10px;
 }
 
 .boton:hover{
     background-color: mediumaquamarine;
 }
 
-.numero2{
-    right: 5%;
-}
 
 /* ↓ Main ↓*/
 main {
-    background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
-    height: calc(100vh - (170px + 80px));
+    background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
+    height: calc(100vh - (170px + 100px));
 }
 
 .tarjetas {
@@ -72,6 +74,11 @@ main {
     width: 100%;
 }
 
+.tarjeta-acceso:hover{
+    width: 699px;
+    margin-top: 0px;
+}
+
 .contenerdor-tarjeta {
     max-width: 320px;
 }
@@ -81,21 +88,62 @@ main {
 
 footer {
     height: 170px;
-    background-color: aquamarine;
-    border-top: 3px solid tomato;
+    border-top: 3px solid black;
+
+    background-image: url("imágenes/fondoBarra.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    font-size: 40px;
+      
+}
+
+.texto-footer{
+    padding: 50px;
 }
 
 /* ↓ Media Queries ↓ */
 @media screen and (max-width: 768px) {
+   
+    main {
+        background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
+        height: 100%;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .texto.navegacion{
+        padding-top: 25px;
+        margin-right: 10px;
+        font-size: 20px;
+        transition-property: font-size;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+    }    
+
     .tarjetas {
         flex-direction: column;
         align-items: center;
         margin-top: 80px;
         margin-bottom: 80px;
     }
-    main {
-        background: linear-gradient(#87CEEB 25%, #1E90FF, #87CEEB 80%);
-        height: 100%;
+
+    footer{
+        background-size: 100% 100%;
+        overflow: hidden;
     }
 
+}
+
+@media screen and (max-width: 380px) {
+    .texto.navegacion{
+        font-size: 15px;
+        padding-top: 20px;
+        transition-property: padding-top;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        text-align: c;
+    }    
 }
