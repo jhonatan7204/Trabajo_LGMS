@@ -4,65 +4,98 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 html {
-    height: 100%;    
+    height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%;    
+    min-height: 100%;
 }
+
 footer {
     margin-top: auto;
 }
+
 /* ↑ Líneas esenciales ↑ */
 
 /* ↓ Header ↓ */
-header{
+header {
     background-color: aquamarine;
-    height: 80px;
+    height: 100px;
     border-bottom: 3px solid tomato;
+    display: inline-block;
+    position: relative;
+}
+
+.imagen{
+    width: 100px;
+    padding: 5px 10px 10px 10px;
+    margin: px solid black;
+}
+
+.imagen:hover{
+    width: 150px;
+}
+
+.boton{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 15%;
+
+}
+
+.boton:hover{
+    background-color: mediumaquamarine;
+}
+
+.numero2{
+    right: 5%;
 }
 
 /* ↓ Main ↓*/
-main{
-    background: linear-gradient(150deg,rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
+main {
+    background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
     height: calc(100vh - (170px + 80px));
 }
-.tarjetas{
-    display: flex;       
+
+.tarjetas {
+    display: flex;
     gap: 15px;
     justify-content: center;
-    margin-top: 200px;        
-    
+    margin-top: 200px;
+
 }
 
-.tarjeta-acceso{
+.tarjeta-acceso {
     width: 100%;
 }
 
-.contenerdor-tarjeta{
+.contenerdor-tarjeta {
     max-width: 320px;
 }
 
 /* ↓ Footer ↓ */
 
-footer{
+
+footer {
     height: 170px;
     background-color: aquamarine;
     border-top: 3px solid tomato;
 }
 
 /* ↓ Media Queries ↓ */
-@media screen and (max-width: 768px){
-    .tarjetas{
+@media screen and (max-width: 768px) {
+    .tarjetas {
         flex-direction: column;
         align-items: center;
         margin-top: 80px;
         margin-bottom: 80px;
     }
-    main{
+    main {
         background: linear-gradient(#87CEEB 25%, #1E90FF, #87CEEB 80%);
         height: 100%;
     }
-    
+
 }
