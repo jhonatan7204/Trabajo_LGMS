@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* ↑ Líneas esenciales ↑ */
+
+/* ↓ Header ↓ */
+header {
+  background-color: aquamarine;
+  height: 80px;
+  border-bottom: 3px solid tomato;
+
+}
+
+/* ↓ Main ↓*/
+main {
+  background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
+  height: calc(100vh - (170px + 80px));
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.tarjeta-acceso {
+  width: 100%;
+}
+
+.contenerdor-tarjeta {
+  max-width: 320px;
+}
+
+/* ↓ Footer ↓ */
+
+footer {
+  height: 170px;
+  background-color: aquamarine;
+  border-top: 3px solid tomato;
+
+}
+
+.titulo-encabezado {
+
+  text-align: center;
+  margin-top: 15px;
+
+}
+
+.tablets-alumno {
+
+  border: 1px solid red;
+  width: 300px;
+  height: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+
+
+
+}
+
+.tablets-alumno2 {
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  margin-left: 45px;
+  margin-top: 10px;
+
+
+}
+
+.usuario {
+
+  border: 1px solid black;
+
+  width: 300px;
+  height: 650px;
+
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+}
+
+.usuario2 {
+
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  margin-left: 45px;
+
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+
+
+}
+
+.menu li:hover .submenu {
+  display: block;
+  opacity: 1;
+
+
+}
+
+.crear-incidencia {
+
+
+  border: 1px solid black;
+  width: 550px;
+  height: 650px;
+
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  
+
+}
+
+.crear-incidencia2 {
+
+
+
+  width: 320px;
+  text-align: center;
+
+  border-bottom: 2px solid black;
+  margin: 15px auto;
+  
+
+
+}
+
+.historial-incidencias {
+
+
+  border: 1px solid black;
+  width: 550px;
+  height: 650px;
+
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.historial-incidencias1 {
+
+
+
+  width: 320px;
+  text-align: center;
+
+  border-bottom: 2px solid black;
+  margin: 15px auto;
+
+
+
+
+
+}
+
+form {
+  
+  font-size: 25px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+form>input{
+
+  width: 190px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 5px;
+
+}
+.botones{
+
+  margin-bottom: 15px;
+
+}
+
