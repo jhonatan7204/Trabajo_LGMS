@@ -1,62 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incidencias Tablets</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .barra{
-            width: 100%;
-            height: 100px;
-            border: 1px solid black;
-            background-color:#d4a833;
-            display: inline-block;
-            position: relative;
-        }
-
-        .imagen{
-            width: 100px;
-            padding: 5px 10px 10px 10px;
-        }
-
-        .imagen:hover{
-            width: 150px;
-        }
-
-        .boton{
-            width: 100px;
-            height: 45px;
-            position: absolute;
-            right: 10%;
-            top: 31px;
-        }
-
-        .numero2{
-            right: 35%;
-        }
-
-        .texto{
-            font-size: 100px;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
+<body>
     <header>
-
         <div class="barra navegacion" >        
-            <img class="imagen" src="imagenes/tabletImagen.jpg">
+            <img class="imagen" src="imágenes/tabletImagen.jpg">
             <button class="boton numero1">Botón</button>
             <button class="boton numero2">Botón 2</button>
         </div>
-        
     </header>
- <body>   
-    <p class="texto"> UWU </p>
+    <main>
+        <div class="tarjetas">
+            <a class="contenerdor-tarjeta" href="  "><img class="tarjeta-acceso" src="imágenes/alumno.jpg" alt="alumnado"></a>
+            <a class="contenerdor-tarjeta" href="  "><img class="tarjeta-acceso" src="imágenes/profesorado.jpg" alt="profesorado"></a>
+            <a class="contenerdor-tarjeta" href="  "><img class="tarjeta-acceso" src="imágenes/direccion.jpg" alt="director/a"></a>
+            <a class="contenerdor-tarjeta" href="  "><img class="tarjeta-acceso" src="imágenes/Admin.jpg" alt="Administrador"></a>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
+
 </html>
