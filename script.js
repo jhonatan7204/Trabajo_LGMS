@@ -4,6 +4,7 @@ inicio.addEventListener("click", saludar);
 
 function saludar(){
     alert("hola mundo");
+
 }
 
 class Persona {
@@ -67,6 +68,4 @@ class Profesor extends Persona {
     get listaAlumnos() {
         return this._listaAlumnos;
     }
-
-
 }
