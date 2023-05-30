@@ -3,66 +3,88 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 html {
-    height: 100%;    
+    height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%;    
+    min-height: 100%;
 }
+
 footer {
     margin-top: auto;
 }
-/* ↑ Líneas esenciales ↑ */
 
-/* ↓ Header ↓ */
-header{
+header {
     background-color: aquamarine;
     height: 80px;
     border-bottom: 3px solid tomato;
 }
 
-/* ↓ Main ↓*/
-main{
-    background: linear-gradient(150deg,rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
-    height: calc(100vh - (170px + 80px));
-}
-.tarjetas{
-    display: flex;       
-    gap: 15px;
-    justify-content: center;
-    margin-top: 200px;        
-    
+main {
+    position: relative;
+    overflow: hidden;
+    transition: background 1s ease;
+    flex-grow: 1;
 }
 
-.tarjeta-acceso{
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
+    transition: opacity 1s ease;
+    opacity: 1;
+    z-index: -1; /* Agrega esta línea */
+}
+
+main:hover::before {
+    opacity: 0;
+}
+
+main:hover {
+    background: mediumpurple;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 200px;
+    z-index: 1; /* Agrega esta línea */
+}
+
+.tarjeta-acceso {
     width: 100%;
 }
 
-.contenerdor-tarjeta{
+.contenerdor-tarjeta {
     max-width: 320px;
 }
 
-/* ↓ Footer ↓ */
-
-footer{
+footer {
     height: 170px;
     background-color: aquamarine;
     border-top: 3px solid tomato;
 }
 
-/* ↓ Media Queries ↓ */
-@media screen and (max-width: 768px){
-    .tarjetas{
+@media screen and (max-width: 768px) {
+    .tarjetas {
         flex-direction: column;
         align-items: center;
         margin-top: 80px;
         margin-bottom: 80px;
     }
-    main{
+
+    main {
         background: linear-gradient(#87CEEB 25%, #1E90FF, #87CEEB 80%);
-        height: 100%;
+        height: 100%; /* Agrega esta línea */
     }
-    
 }
+
