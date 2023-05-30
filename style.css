@@ -18,10 +18,16 @@ footer {
     margin-top: auto;
 }
 
+/* ↑ Líneas esenciales ↑ */
+
+/* ↓ Header ↓ */
 header {
     background-color: aquamarine;
-    height: 80px;
-    border-bottom: 3px solid tomato;
+    height: 100px;
+    border-bottom: 3px solid black;
+    background-image: url("imágenes/fondoBarra.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
 }
 
 main {
@@ -70,11 +76,41 @@ main:hover {
 
 footer {
     height: 170px;
-    background-color: aquamarine;
-    border-top: 3px solid tomato;
+    border-top: 3px solid black;
+
+    background-image: url("imágenes/fondoBarra.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    font-size: 40px;
+      
 }
 
+.texto-footer{
+    padding: 50px;
+}
+
+/* ↓ Media Queries ↓ */
 @media screen and (max-width: 768px) {
+   
+    main {
+        background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
+        height: 100%;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .texto.navegacion{
+        padding-top: 25px;
+        margin-right: 10px;
+        font-size: 20px;
+        transition-property: font-size;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+    }    
+
     .tarjetas {
         flex-direction: column;
         align-items: center;
@@ -86,5 +122,20 @@ footer {
         background: linear-gradient(#87CEEB 25%, #1E90FF, #87CEEB 80%);
         height: 100%; /* Agrega esta línea */
     }
+    footer{
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
 }
 
+@media screen and (max-width: 380px) {
+    .texto.navegacion{
+        font-size: 15px;
+        padding-top: 20px;
+        transition-property: padding-top;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        text-align: c;
+    }    
+}
