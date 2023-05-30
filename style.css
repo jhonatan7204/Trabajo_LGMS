@@ -21,8 +21,7 @@ footer {
 /* ↑ Líneas esenciales ↑ */
 
 /* ↓ Header ↓ */
-header {
-    background-color: aquamarine;
+header {    
     height: 100px;
     border-bottom: 3px solid black;
     background-image: url("imágenes/fondoBarra.jpg");
@@ -30,40 +29,59 @@ header {
     background-size: 100% 100px;
 }
 
+.barra.navegacion{
+    height: 100px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto.navegacion{
+    text-shadow: 2px 2px 2px white;
+    text-align: center;
+}
+
+.imagen{
+    width: 100px;    
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px cadetblue;
+}
+.contenedor-botones{
+    display: inline-block;
+}
+
+.boton{
+    width: 80px;
+    height: 50px;    
+    border: 2px solid sienna;
+    font-weight: 500;    
+    border-radius: 5px;
+    box-shadow: 3px 3px black;    
+}
+
+.boton:hover{
+    background-color: mediumaquamarine;
+    transition: background-color 0.5s ease;
+    background-color: sandybrown;
+}
+
+/* ↓ Main ↓ */
+
 main {
-    position: relative;
+    background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);    
     overflow: hidden;
-    transition: background 1s ease;
     flex-grow: 1;
-}
-
-main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
-    transition: opacity 1s ease;
-    opacity: 1;
-    z-index: -1; /* Agrega esta línea */
-}
-
-main:hover::before {
-    opacity: 0;
-}
-
-main:hover {
-    background: mediumpurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 .tarjetas {
-    display: flex;
-    gap: 15px;
+    display: flex;    
+    gap: 20px;
     justify-content: center;
-    margin-top: 200px;
-    z-index: 1; /* Agrega esta línea */
 }
 
 .tarjeta-acceso {
@@ -72,6 +90,7 @@ main:hover {
 
 .contenerdor-tarjeta {
     max-width: 320px;
+    transition: transform 1s;
 }
 
 footer {
@@ -136,6 +155,8 @@ footer {
         transition-property: padding-top;
         transition-duration: 0.4s;
         transition-timing-function: ease-out;
-        text-align: c;
+        text-align: center;
     }    
 }
+
+
