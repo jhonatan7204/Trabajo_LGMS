@@ -144,6 +144,6 @@ footer {
         transition-property: padding-top;
         transition-duration: 0.4s;
         transition-timing-function: ease-out;
-        text-align: c;
+        text-align: center;
     }    
 }

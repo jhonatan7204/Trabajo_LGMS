@@ -150,27 +150,24 @@ class Tablet {
     }
 
     mostrarTablet() {
-        let cadena = "ID tablet -> " + this.idTablet + "\n"
-            + "Nombre alumno propietario -> " + this.alumnoActual.nombre +
-            "\n" + "Historial de incidencias: ";
-
-        /*
-        if (this.historialIncidencias === 0) {
-            cadena += "La tablet no tiene ningúna incidencia previa";
-        } else {   
+        let cadena = "ID tablet -> " + this.idTablet + "\n" +
+            "Nombre alumno propietario -> " + this.alumnoActual.nombre + "\n" +
+            "Historial de incidencias: ";
+    
+        if (this.historialIncidencias.length === 0) {
+            cadena += "La tablet no tiene ninguna incidencia previa";
+        } else {
             let indice = 1;
-            for(let incidencia of this.historialIncidencias) {
-                cadena += "Incidencia número " + indice;
+            for (let incidencia of this.historialIncidencias) {
+                cadena += "Incidencia número " + indice + "\n";
                 cadena += incidencia;
-                indice += 1; 
-        } */
-
+                indice += 1;
+            }
+        }
+    
         return cadena;
     }
-
-
 }
-
 
 class Incidencia {
     constructor(idIncidencia, alumnoCausante, incidencia) {
@@ -205,7 +202,7 @@ class Incidencia {
 
     mostrarIncidencia() {
         let cadena = ("ID de la incidencia -> " + this.idIncidencia + "\n"
-            + "Alumno causante: " + this.alumnoCausante.mostrarDatos() + "\n"
+            + "Alumno causante: " + this.alumnoCausante.nombre + "\n"
             + "Incidencia causada: \n" + this.incidencia);
         return cadena;
     }
