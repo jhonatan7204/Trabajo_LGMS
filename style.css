@@ -92,6 +92,9 @@ main {
     max-width: 320px;
     transition: transform 1s;
 }
+.contenerdor-tarjeta:hover{
+    transform: scale(1.1);
+}
 
 footer {
     height: 170px;
