@@ -174,22 +174,3 @@ let alumno1 = new Alumno("74394272J","Andres",33,"1ºDAN","Tablet_ejemplo");
 
 alumno1.mostrarDatos(); */
 
-/* ↓ Script para cambiar de color al background al pasar el ratón por encima */
-
-const cuadrado = document.querySelectorAll(".contenerdor-tarjeta");
-
-for(let i = 0; i < cuadrado.length; i++){
-    cuadrado[i].addEventListener('mouseover', ()=> hoverImg(i));
-    cuadrado[i].addEventListener('mouseout', ()=> hoverReset(i));
-}
-
-function hoverImg(j){
-    cuadrado[j].style.transform = 'scale(1.1)';    
-}
-function hoverReset(j){
-    cuadrado[j].style.transform = 'scale(1)';
-}
-
-
-
-//'linear-gradient(150deg,  rgb(138, 32, 224) 15%, rgb(26, 7, 41) 85%)'
