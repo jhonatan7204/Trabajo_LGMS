@@ -83,28 +83,48 @@ main {
     background-repeat: no-repeat;
     border-radius: 5%;
     width: 250px;
-    height: 300px;
+    height: 330px;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
 }
 
 .registro_alumno{
     text-align: center;
-    width: 100%;
-    height: 55px;
+
     border-radius: 3%;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 23px;
+    border-bottom: 5px solid purple;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
+    margin: 10px;
+    height: 75%;
+
+    
 }
 
 form>button{
-    max-width: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid purple;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(150deg, rgb(171, 89, 179)30%, rgb(118, 35, 134)70%);
+}
+label{
     margin-bottom: 5px;
+
+}
+form>input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid purple;
+    margin-bottom: 20px;
+    outline: none;
 }
 
 /* Footer */
