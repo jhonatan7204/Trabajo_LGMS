@@ -103,6 +103,9 @@ main {
 .tarjeta-acceso:hover{
     transform: scale(1.1);
 }
+.contenerdor-tarjeta:hover{
+    transform: scale(1.1);
+}
 
 footer {
     height: 170px;
