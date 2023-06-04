@@ -78,6 +78,8 @@ main {
     justify-content: center;    
 }
 
+/* Inicio Sesión Alumno */
+
 .inicio_alumno{
     background-image: url(imágenes/fondoBarra.jpg);
     background-repeat: no-repeat;
@@ -89,13 +91,116 @@ main {
 
 .registro_alumno{
     text-align: center;
-
     border-radius: 3%;
     padding: 20px 0;
     font-weight: 700;
     font-size: 23px;
     border-bottom: 5px solid purple;
 }
+
+.boton-alumno{
+    border: 2px solid purple;
+    background: linear-gradient(150deg, rgb(171, 89, 179)30%, rgb(118, 35, 134)70%);
+}
+
+.borde-input-alumno{
+    border: 2px solid purple;
+}
+
+/* ***** */
+
+/* Inicio Sesión Profesorado */
+
+.inicio_profesor{
+    background-image: url(imágenes/fondoBarra.jpg);
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    width: 250px;
+    height: 330px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.registro_profesor{
+    text-align: center;
+    border-radius: 3%;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 23px;
+    border-bottom: 5px solid lightskyblue;
+}
+
+.boton-profesor{
+    border: 2px solid lightskyblue;
+    background: linear-gradient(150deg, rgb(36, 131, 160)30%, rgb(72, 198, 207)70%);
+}
+
+.borde-input-profesor{
+    border: 2px solid lightskyblue;
+}
+
+/* **** */
+
+/* Inicio Sesión Dirección */
+
+.inicio_director{
+    background-image: url(imágenes/fondoBarra.jpg);
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    width: 250px;
+    height: 330px;
+    box-shadow: 0 0 20px rgba(42, 138, 47, 0.5);
+}
+
+.registro_director{
+    text-align: center;
+    border-radius: 3%;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 23px;
+    border-bottom: 5px solid green;
+}
+
+.boton-director{
+    border: 2px solid green;
+    background: linear-gradient(150deg, rgb(58, 189, 75)30%, rgb(35, 136, 52)70%);
+}
+
+.borde-input-director{
+    border: 2px solid green;
+}
+
+/* ***** */
+
+/* Inicio Sesión Administrador */
+
+.inicio_admin{
+    background-image: url(imágenes/fondoBarra.jpg);
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    width: 250px;
+    height: 330px;
+    box-shadow: 0 0 20px rgba(201, 55, 55, 0.5);
+}
+
+.registro_admin{
+    text-align: center;
+    border-radius: 3%;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 23px;
+    border-bottom: 5px solid red;
+}
+
+.boton-admin{
+    border: 2px solid red;
+    background: linear-gradient(150deg, rgb(223, 34, 34)30%, rgb(163, 31, 31)70%);
+}
+
+.borde-input-admin{
+    border: 2px solid red;
+}
+
+/* **** */
 
 form{
     display: flex;
@@ -106,15 +211,15 @@ form{
     
 }
 
+
 form>button{
     margin-bottom: 10px;
     border-radius: 10px;
-    border: 2px solid purple;
     padding: 5px;
     cursor: pointer;
     color: white;
-    background: linear-gradient(150deg, rgb(171, 89, 179)30%, rgb(118, 35, 134)70%);
 }
+
 label{
     margin-bottom: 5px;
 
@@ -122,7 +227,6 @@ label{
 form>input{
     padding: 5px;
     border-radius: 10px;
-    border: 2px solid purple;
     margin-bottom: 20px;
     outline: none;
 }
