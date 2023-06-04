@@ -12,6 +12,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 100%;
+  background-color: rgb(39, 138, 138);
+
 }
 
 footer {
@@ -24,16 +27,19 @@ footer {
 header {
   background-color: aquamarine;
   height: 80px;
-  border-bottom: 3px solid tomato;
+  display: flex;
+
 
 }
 
 /* ↓ Main ↓*/
 main {
-  background: linear-gradient(150deg, rgb(215, 180, 255) 15%, rgb(181, 253, 241), rgb(222, 255, 214), rgb(252, 182, 182) 85%);
+
   height: calc(100vh - (170px + 80px));
   display: flex;
   justify-content: space-around;
+
+
 }
 
 
@@ -50,20 +56,32 @@ main {
 footer {
   height: 170px;
   background-color: aquamarine;
-  border-top: 3px solid tomato;
 
+
+}
+
+.texto-usuario {
+
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+
+}
+
+.container-credentials-username a {
+  text-decoration: none;
 }
 
 .titulo-encabezado {
 
-  text-align: center;
+  padding-left: 20px;
   margin-top: 15px;
 
 }
 
 .tablets-alumno {
 
-  border: 1px solid red;
+  border: 1px solid black;
   width: 300px;
   height: 650px;
   margin-top: 20px;
@@ -102,12 +120,32 @@ footer {
 
 .usuario2 {
 
-  width: 200px;
+
+  margin-top: 20px;
   text-align: center;
   font-size: 30px;
-  border-bottom: 2px solid black;
-  margin-left: 45px;
+  width: 300px;
+  float: right;
+  position: absolute;
+  right: 1px;
 
+
+
+
+}
+
+.img_usuario {
+
+
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 6px;
+  margin-right: 55px;
+  background-image: url(./perfil.webp);
+  background-repeat: no-repeat;
+  background-size: 40px;
 }
 
 .menu {
@@ -124,7 +162,7 @@ footer {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #000;
+
 }
 
 .submenu {
@@ -137,12 +175,27 @@ footer {
 
 }
 
-.menu li:hover .submenu {
+.container-credentials-username:hover .submenu {
   display: block;
   opacity: 1;
+  list-style-type: none;
+  background-color: rgba(20, 20, 20, 0.9);
 
+  padding: 20px;
+  border-radius: 10px;
+
+  text-align: center;
 
 }
+
+.desplegable {
+
+  color: white;
+
+}
+
+
+
 
 .crear-incidencia {
 
@@ -156,7 +209,7 @@ footer {
   margin-bottom: 20px;
   text-align: center;
   font-size: 30px;
-  
+
 
 }
 
@@ -169,8 +222,16 @@ footer {
 
   border-bottom: 2px solid black;
   margin: 15px auto;
-  
 
+
+
+}
+
+.incidencias {
+
+  border: 1px solid black;
+  height: 88%;
+  text-align: center;
 
 }
 
@@ -206,28 +267,236 @@ footer {
 }
 
 form {
-  
+
   font-size: 25px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 
 }
 
-form>input{
+form>input {
 
   width: 190px;
   margin-bottom: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
   margin-top: 5px;
+  padding-left: 5px;
+
 
 }
-.botones{
+
+#incidencia {
+
+  padding-left: 5px;
+  padding-top: 5px;
+
+}
+
+.botones {
 
   margin-bottom: 15px;
 
 }
 
+@media screen and (max-width: 850px) {
+  main {
+
+    height: calc(100vh - (170px + 80px));
+    justify-content: space-around;
+    display: block;
+  }
+
+  .usuario2 {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 30px;
+    float: inline-end;
+  }
+
+  .container-credentials-username {
+    margin-top: 8px;
+    right: 21%;
+    position: absolute;
+  }
+
+  .img_usuario {
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+    background-image: url(./perfil.webp);
+    background-repeat: no-repeat;
+    background-size: 40px;
+  }
+
+  .titulo-encabezado {
+    padding-left: 15px;
+    margin-top: 15px;
+  }
+
+  .tablets-alumno {
+    border: 1px solid black;
+    width: 240px;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 2%;
+  }
+
+  .crear-incidencia {
+    border: 1px solid black;
+    width: 520px;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 3%;
+  }
+
+  #incidencia {
+    padding-left: 5px;
+    padding-top: 5px;
+    height: 150px;
+    margin-top: 10px;
+  }
+
+  .tablets-alumno2 {
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .tablets-alumno {
+    float: right;
+  }
+
+  .historial-incidencias {
+    border: 1px solid black;
+    width: 94%;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 3%;
+  }
+
+  footer {
+
+    display: none;
+  }
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 812px) {
+
+
+  .crear-incidencia {
+
+    width: 60%;
+    ;
+
+
+
+  }
+
+  .tablets-alumno {
+
+    width: 35%;
+
+  }
+
+
+  .usuario2 {
+
+
+    width: 100%;
+
+  }
+
+
+
+
+  @media screen and (max-width: 587px) {
+
+
+    .crear-incidencia {
+
+      width: 60%;
+      ;
+
+
+
+    }
+
+    .tablets-alumno {
+
+      width: 35%;
+
+    }
+
+
+    .usuario2 {
+
+
+      width: 100%;
+
+    }
+
+    header {
+
+      width: 100%;
+
+
+
+    }
+
+    .tablets-alumno2 {
+
+      font-size: 20px;
+      width: 80%;
+
+    }
+
+    .crear-incidencia2 {
+      font-size: 20px;
+      width: 80%;
+
+    }
+
+    form>input {
+
+      width: 80%;
+    }
+
+    form>.botones {
+
+      width: 50%;
+
+    }
+
+    #incidencia {
+
+      width: 80%;
+
+    }
+
+
+  }
+}
