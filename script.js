@@ -1,49 +1,38 @@
-
-/*
-const inicio = document.querySelector('.titulo-encabezado');
-
-inicio.addEventListener("click", saludar);
-
-function saludar(){
-    alert("hola mundo");
-
-} */
-
 class Persona {
     constructor(dni, nombre, edad) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.edad = edad;
+        this._dni = dni;
+        this._nombre = nombre;
+        this._edad = edad;
     }
 
-    get dni() {
+    getdni() {
         return this._dni;
     }
 
-    set dni(nuevo_DNI) {
+    setdni(nuevo_DNI) {
         this._dni = nuevo_DNI;
     }
 
-    get nombre() {
+    getnombre() {
         return this._nombre;
     }
 
-    set nombre(nuevo_Nombre) {
+    setnombre(nuevo_Nombre) {
         this._nombre = nuevo_Nombre;
     }
 
-    get edad() {
+    getedad() {
         return this._edad;
     }
 
-    set edad(nueva_Edad) {
+    setedad(nueva_Edad) {
         this._edad = nueva_Edad;
     }
 
     mostrarDatos(){
-        console.log("DNI -> " + this.dni);
-        console.log("Nombre -> " + this.nombre);
-        console.log("Edad -> " + this.edad);
+        console.log("DNI -> " + this._dni);
+        console.log("Nombre -> " + this._nombre);
+        console.log("Edad -> " + this._edad);
     }
 
 }
@@ -51,35 +40,35 @@ class Persona {
 class Profesor extends Persona {
     constructor(dni, nombre, edad, asignatura, claseAsignada, listaAlumnos) {
         super(dni, nombre, edad); 
-        this.asignatura = asignatura;
-        this.claseAsignada = claseAsignada;
-        this.listaAlumnos = listaAlumnos;
+        this._asignatura = asignatura;
+        this._claseAsignada = claseAsignada;
+        this._listaAlumnos = listaAlumnos;
     }
 
-    get asignatura() {
+    getasignatura() {
         return this._asignatura;
     }
 
-    set asignatura(nuevaAsignatura) {
+    setasignatura(nuevaAsignatura) {
         this._asignatura = nuevaAsignatura;
     }
 
-    get claseAsignada() {
+    getclaseAsignada() {
         return this._claseAsignada;
     }
 
-    set claseAsignada(nuevaClaseAsignada) {
+    setclaseAsignada(nuevaClaseAsignada) {
         this._claseAsignada = nuevaClaseAsignada;
     }
 
-    get listaAlumnos() {
+    getlistaAlumnos() {
         return this._listaAlumnos;
     }
 
     mostrarDatos(){
         super.mostrarDatos();
-        console.log("Asignatura -> " + this.asignatura);
-        console.log("Clase asignada -> " + this.claseAsignada);      
+        console.log("Asignatura -> " + this._asignatura);
+        console.log("Clase asignada -> " + this._claseAsignada);      
     }
 }
 
@@ -90,75 +79,75 @@ class Alumno extends Persona {
         this._curso = curso;
     }
 
-    get curso() {
+    getcurso() {
         return this._curso;
     }
 
-    set curso(nuevoCurso) {
+    setcurso(nuevoCurso) {
         this._curso = nuevoCurso;
     }
 
-    get tablet() {
+    gettablet() {
         return this._tablet;
     }
 
-    set tablet(nuevaTablet) {
+    settablet(nuevaTablet) {
         this._tablet = nuevaTablet;
     }
 
     mostrarDatos() {
         super.mostrarDatos();
-        console.log("Curso -> " + this.curso);
-        console.log("Tablet asignada -> " + this.tablet);      
+        console.log("Curso -> " + this._curso);
+        console.log("Tablet asignada -> " + this._tablet);      
     }
 }
 
 class Tablet{
     constructor(idTablet,alumnoActual,historialIncidencias) {
-        this.idTablet = idTablet;
-        this.alumnoActual = alumnoActual;
-        this.historialIncidencias = historialIncidencias;
+        this._idTablet = idTablet;
+        this._alumnoActual = alumnoActual;
+        this._historialIncidencias = historialIncidencias;
     }
 
-    get idTablet(){
+    getidTablet(){
         return this._idTablet;
     }
 
-    set idTablet(nuevaTablet) {
+    setidTablet(nuevaTablet) {
         this._idTablet = nuevaTablet;
     }
 
-    get alumnoActual() {
+    getalumnoActual() {
         return this._alumnoActual;
     }
 
-    set alumnoActual (nuevoAlumno) {
+    setalumnoActual (nuevoAlumno) {
         this._alumnoActual = nuevoAlumno;
     }
 
-    get historialIncidencias(){
+    gethistorialIncidencias(){
         return this._historialIncidencias;
     }
 
-    set historialIncidencias(historial){
+    sethistorialIncidencias(historial){
         this._historialIncidencias = historial;
     }
 
     agregarIncidencia(nuevaIncidencia){
-        this.historialIncidencias.push(nuevaIncidencia);
+        this._historialIncidencias.push(nuevaIncidencia);
     }
 
     mostrarTablet(){
-        console.log("ID tablet -> " + this.idTablet);
-        console.log("Alumno propietario -> " + this.alumnoActual.nombre);
+        console.log("ID tablet -> " + this._idTablet);
+        console.log("Alumno propietario -> " + this._alumnoActual.getnombre());
         console.log("Historial de incidencias: ");
 
-        if (this.historialIncidencias === 0){
+        if (this._historialIncidencias === 0){
             console.log("La tablet no tiene ningúna incidencia previa");
         } else {
             let indice = 1;
             console.log("");
-            for(let incidencia of this.historialIncidencias) {
+            for(let incidencia of this._historialIncidencias) {
                 console.log("Incidencia número " + indice);
                 console.log(incidencia);
                 indice += 1;
@@ -169,14 +158,14 @@ class Tablet{
 
 }
 
+let alumno = new Alumno("12345678", "Andrés", 16, "1ºDAM", "Tablet1");
+let historialIncidencias = ["Escupitajo", "Destrozo", "Se descargó tik tok"];
 
-const alumno = new Alumno("12345678", "Andrés", 16, "1ºDAM", "Tablet1");
-const historialIncidencias = ["Escupitajo", "Destrozo", "Se descargó tik tok"];
 
+let tablet = new Tablet("Tablet1", alumno, historialIncidencias);
 
-const tablet = new Tablet("Tablet1", alumno, historialIncidencias);
-
-tablet.historialIncidencias.agregarIncidencia("afasdfas");
+tablet.agregarIncidencia("afasdfas");
+tablet.gethistorialIncidencias();
 
 tablet.mostrarTablet();
 

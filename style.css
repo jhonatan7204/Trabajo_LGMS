@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 html {
     height: 100%;
 }
@@ -11,7 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    overflow: hidden;
 }
 
 footer {
@@ -21,8 +21,7 @@ footer {
 /* ↑ Líneas esenciales ↑ */
 
 /* ↓ Header ↓ */
-header {
-    background-color: aquamarine;
+header {    
     height: 100px;
     border-bottom: 3px solid black;
     background-image: url("imágenes/fondoBarra.jpg");
@@ -32,79 +31,118 @@ header {
 
 .barra.navegacion{
     height: 100px;
+    margin: 0 15px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .texto.navegacion{
-    padding-top: 25px;
-    margin-right: 10px;
+    text-shadow: 2px 2px 2px white;
+    text-align: center;
+}
+
+.contenedor-imagen-header{
+    width: 165px;
 }
 
 .imagen{
-    width: 100px;
-    padding: 5px 10px 10px 10px;
+    width: 100px;    
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px cadetblue;
+}
+.contenedor-botones{
+    display: flex;
+    gap: 5px;
 }
 
 .boton{
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 80px;
+    height: 50px;
+    border: 2px solid sienna;
+    font-weight: 500;    
+    border-radius: 5px;
+    box-shadow: 3px 3px black;    
 }
 
 .boton:hover{
     background-color: mediumaquamarine;
+    transition: background-color 0.5s ease;
+    background-color: sandybrown;
 }
 
+/* ↓ Main ↓ */
 
-/* ↓ Main ↓*/
 main {
-    background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
-    height: calc(100vh - (170px + 100px));
+    background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);    
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 .tarjetas {
-    display: flex;
-    gap: 15px;
+    display: flex;    
+    gap: 20px;
     justify-content: center;
-    margin-top: 200px;
-
 }
 
 .tarjeta-acceso {
     width: 100%;
-}
-
-.tarjeta-acceso:hover{
-    width: 699px;
-    margin-top: 0px;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
 }
 
 .contenerdor-tarjeta {
     max-width: 320px;
 }
 
-/* ↓ Footer ↓ */
-
+.tarjeta-acceso:hover{
+    transform: scale(1.1);
+}
 
 footer {
     height: 170px;
     border-top: 3px solid black;
-
     background-image: url("imágenes/fondoBarra.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
-    font-size: 40px;
-      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
 }
 
-.texto-footer{
-    padding: 50px;
+.aviso-contacto{
+    display: flex;
+    gap: 10px;    
 }
 
 /* ↓ Media Queries ↓ */
 @media screen and (max-width: 768px) {
    
+    .contenedor-imagen-header{
+        width: auto;
+    }
+
+    .imagen{
+        width: 80px;
+    }
+
+    .contenedor-botones{
+        flex-direction: column;
+    }
+
+    .boton{
+        width: 60px;
+        height: 35px;
+    }
+
     main {
         background: linear-gradient(150deg,  rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
         height: 100%;
@@ -114,25 +152,21 @@ footer {
         overflow: scroll;
     }
 
-    .texto.navegacion{
-        padding-top: 25px;
-        margin-right: 10px;
-        font-size: 20px;
-        transition-property: font-size;
-        transition-duration: 0.6s;
-        transition-timing-function: ease-out;
-    }    
+    .texto.navegacion{        
+        font-size: 25px;
+        transition: font-size 0.5s ease;
+    }
 
     .tarjetas {
         flex-direction: column;
         align-items: center;
-        margin-top: 80px;
-        margin-bottom: 80px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
-
+    
     footer{
         background-size: 100% 100%;
-        overflow: hidden;
+        overflow: hidden;        
     }
 
 }
@@ -144,6 +178,8 @@ footer {
         transition-property: padding-top;
         transition-duration: 0.4s;
         transition-timing-function: ease-out;
-        text-align: c;
+        text-align: center;
     }    
 }
+
+
