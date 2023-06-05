@@ -24,7 +24,7 @@ footer {
 header {    
     height: 100px;
     border-bottom: 3px solid black;
-    background-image: url("imágenes/fondoBarra.jpg");
+    background-image: url("../imágenes/fondoBarra.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100px;
 }
@@ -42,6 +42,10 @@ header {
     text-align: center;
 }
 
+.contenedor-imagen-header{
+    width: 165px;
+}
+
 .imagen{
     width: 100px;    
     border: 1px solid gray;
@@ -49,7 +53,8 @@ header {
     box-shadow: 3px 3px cadetblue;
 }
 .contenedor-botones{
-    display: inline-block;
+    display: flex;
+    gap: 5px;
 }
 
 .boton{
@@ -81,7 +86,7 @@ main {
 /* Inicio Sesión Alumno */
 
 .inicio_alumno{
-    background-image: url(imágenes/fondoBarra.jpg);
+    background-image: url(../imágenes/fondoBarra.jpg);
     background-repeat: no-repeat;
     border-radius: 5%;
     width: 250px;
@@ -112,7 +117,7 @@ main {
 /* Inicio Sesión Profesorado */
 
 .inicio_profesor{
-    background-image: url(imágenes/fondoBarra.jpg);
+    background-image: url(../imágenes/fondoBarra.jpg);
     background-repeat: no-repeat;
     border-radius: 5%;
     width: 250px;
@@ -143,7 +148,7 @@ main {
 /* Inicio Sesión Dirección */
 
 .inicio_director{
-    background-image: url(imágenes/fondoBarra.jpg);
+    background-image: url(../imágenes/fondoBarra.jpg);
     background-repeat: no-repeat;
     border-radius: 5%;
     width: 250px;
@@ -174,7 +179,7 @@ main {
 /* Inicio Sesión Administrador */
 
 .inicio_admin{
-    background-image: url(imágenes/fondoBarra.jpg);
+    background-image: url(../imágenes/fondoBarra.jpg);
     background-repeat: no-repeat;
     border-radius: 5%;
     width: 250px;
@@ -239,7 +244,7 @@ form>input{
 footer {
     height: 170px;
     border-top: 3px solid black;
-    background-image: url("imágenes/fondoBarra.jpg");
+    background-image: url("../imágenes/fondoBarra.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
