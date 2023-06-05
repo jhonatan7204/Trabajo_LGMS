@@ -18,8 +18,6 @@ footer {
     margin-top: auto;
 }
 
-node main.js
-
 /* ↑ Líneas esenciales ↑ */
 
 /* ↓ Header ↓ */
@@ -55,8 +53,9 @@ header {
     box-shadow: 3px 3px cadetblue;
 }
 .contenedor-botones{
-    display: flex;
-    gap: 5px;
+    display: flex;    
+    width: 165px;
+    justify-content: end;
 }
 
 .boton{
@@ -183,5 +182,4 @@ footer {
         text-align: center;
     }    
 }
-
 

@@ -178,17 +178,20 @@ const boton = document.querySelector("#btn");
 function validar(){
     let desabilitar = false;
 
-    if(form.txt_1.value == "" || form.txt_2.value == ""){
+    if(form.txt_1.value == ""){
         desabilitar = true;
-    }    
-    if(desabilitar == false){
+    }
+    if(form.txt_2.value == ""){
+        desabilitar = true;
+    }
+    if(desabilitar == true){
         boton.disabled = true;
         document.getElementById("btn").style.background = "linear-gradient(150deg, rgb(255, 255, 255)30%, rgb(255, 255, 255)70%)";
         document.getElementById("btn").style.color = "black";
         document.getElementById("btn").style.height = "200px";
         document.getElementById("btn").style.cursor = "pointer";
     } else{
-        document.getElementById("btn").style.cssText = "";
+        boton.disabled = false;         
     }
 }
 
@@ -196,7 +199,7 @@ form.addEventListener("keyup",validar);
 
 try{
     document.querySelector(".boton-alumno").addEventListener("click",() =>{
-        window.location = "https://www.twitch.tv";
+        window.location = "../pagina alumno/pagina_alumno.html";
     });
 } catch(e){
     
@@ -204,7 +207,7 @@ try{
 
 try{
     document.querySelector(".boton-admin").addEventListener("click",() =>{
-        window.location = "https://www.twitch.tv";
+        window.location = "../pagina admin/pagina_admin.html";
     });
 } catch(e){
     
@@ -212,7 +215,7 @@ try{
 
 try{
     document.querySelector(".boton-profesor").addEventListener("click",() =>{
-        window.location = "https://www.twitch.tv";
+        window.location = "../pagina_profesor/pagina_profesor.html";
     });
 } catch(e){
     
@@ -220,10 +223,18 @@ try{
 
 try{
     document.querySelector(".boton-director").addEventListener("click",() =>{
-        window.location = "https://www.twitch.tv";
+        window.location = "../pagina director/pagina_director.html";
     });
 } catch(e){
     
+}
+
+try{
+    document.querySelector(".boton.numero2").addEventListener("click", () =>{
+        window.location = "../index.html";
+    });
+}catch(e){
+
 }
 /* **** */
 
@@ -231,4 +242,3 @@ try{
 let alumno1 = new Alumno("74394272J","Andres",33,"1ºDAN","Tablet_ejemplo");
 
 alumno1.mostrarDatos(); */
-

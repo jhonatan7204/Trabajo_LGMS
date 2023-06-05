@@ -53,8 +53,9 @@ header {
     box-shadow: 3px 3px cadetblue;
 }
 .contenedor-botones{
-    display: flex;
-    gap: 5px;
+    display: flex;    
+    width: 165px;
+    justify-content: end;
 }
 
 .boton{
