@@ -169,22 +169,67 @@ tablet.gethistorialIncidencias();
 
 tablet.mostrarTablet();
 
-function habilitar(){
-    txt_1 = document.getElementById("txt_1").value;
-    txt_2 = document.getElementById("txt_2").value;
-    val = 0;
+/* habilitar botón y enlazar */
 
-    if(txt_1 == ""){
-        val++;
-    }
-    if(txt_2 == ""){
-        val++;
-    }
 
-    if(val == 0){
-        document.getElementById("btn").disable = false;
+const form = document.querySelector("#form");
+const boton = document.querySelector("#btn");
+
+function validar(){
+    let desabilitar = false;
+
+    if(form.txt_1.value == ""){
+        desabilitar = true;
+    }
+    if(form.txt_2.value == ""){
+        desabilitar = true;
+    }
+    if(desabilitar == true){
+        boton.disabled = true;
+        document.getElementById("btn").style.background = "linear-gradient(150deg, rgb(255, 255, 255)30%, rgb(255, 255, 255)70%)";
+        document.getElementById("btn").style.color = "black";
+        document.getElementById("btn").style.height = "200px";
+        document.getElementById("btn").style.cursor = "pointer";
+    } else{
+        boton.disabled = false; 
+        
     }
 }
+
+form.addEventListener("keyup",validar);
+
+try{
+    document.querySelector(".boton-alumno").addEventListener("click",() =>{
+        window.location = "https://www.twitch.tv";
+    });
+} catch(e){
+    
+}
+
+try{
+    document.querySelector(".boton-admin").addEventListener("click",() =>{
+        window.location = "https://www.twitch.tv";
+    });
+} catch(e){
+    
+}
+
+try{
+    document.querySelector(".boton-profesor").addEventListener("click",() =>{
+        window.location = "https://www.twitch.tv";
+    });
+} catch(e){
+    
+}
+
+try{
+    document.querySelector(".boton-director").addEventListener("click",() =>{
+        window.location = "https://www.twitch.tv";
+    });
+} catch(e){
+    
+}
+/* **** */
 
 /*
 let alumno1 = new Alumno("74394272J","Andres",33,"1ºDAN","Tablet_ejemplo");

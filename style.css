@@ -190,8 +190,11 @@ main {
     font-size: 23px;
     border-bottom: 5px solid red;
 }
-
+#btn{
+    cursor: not-allowed;
+}
 .boton-admin{
+    
     border: 2px solid red;
     background: linear-gradient(150deg, rgb(223, 34, 34)30%, rgb(163, 31, 31)70%);
 }
