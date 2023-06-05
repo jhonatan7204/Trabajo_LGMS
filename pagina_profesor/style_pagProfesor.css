@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* ↑ Líneas esenciales ↑ */
+
+/* ↓ Header ↓ */
+header {
+  height: 100px;
+  border-bottom: 3px solid black;
+  background-image: url("../imágenes/fondoBarra.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+}
+
+
+.barra.navegacion {
+  height: 100px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto.navegacion {
+  text-shadow: 2px 2px 2px white;
+  text-align: center;
+}
+
+/* ↓ Main ↓*/
+main {
+  background: linear-gradient(150deg, rgb(214, 139, 105) 15%, rgb(68, 54, 54) 85%);
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+.tarjeta-acceso {
+  width: 100%;
+}
+
+.contenerdor-tarjeta {
+  max-width: 320px;
+}
+
+/* ↓ Footer ↓ */
+
+footer {
+  height: 170px;
+  border-top: 3px solid black;
+  background-image: url("../imágenes/fondoBarra.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+
+}
+
+.titulo-encabezado{
+
+  padding-left: 20px;
+  
+  
+
+}
+
+.texto-usuario {
+
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+
+}
+.clase{
+
+text-align: center;
+
+}
+
+.container-credentials-username a {
+  text-decoration: none;
+}
+
+
+
+.tablets-alumno {
+
+  border: 1px solid black;
+  width: 300px;
+  height: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+
+
+
+}
+
+.tablets-alumno2 {
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  margin-left: 45px;
+  margin-top: 10px;
+
+
+}
+
+
+
+.container-credentials-username {
+
+  width: 100px;
+}
+
+
+
+.img_usuario {
+
+
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 20px;
+
+
+
+
+  background-image: url(../imágenes/perfil.webp);
+  background-repeat: no-repeat;
+  background-size: 40px;
+
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+
+
+
+}
+
+.container-credentials-username:hover .submenu {
+  display: block;
+  opacity: 1;
+  list-style-type: none;
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 20px;
+
+
+  border-radius: 10px;
+
+  text-align: center;
+
+}
+
+.usuario2 {
+
+  position: absolute;
+  text-align: center;
+  right: 20px;
+
+  font-size: 25px;
+  width: 300px;
+  height: 100px;
+  top: 10px;
+
+}
+
+
+.container-credentials-username {
+
+  position: absolute;
+  margin-bottom: 20px;
+  margin-left: 131px;
+  border-bottom: 1px solid black;
+                
+}
+
+.desplegable {
+
+  color: white;
+
+}
+
+.container{
+
+  width: 70%;
+  height: 700px;
+  align-items: center;
+  margin: 20px 0; 
+
+}
+
+
+
+.incidencias {
+
+  border: 1px solid black;
+  height: 88%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  
+
+
+}
+
+.incidencia{
+
+
+  font-size: 30px;
+  
+  
+
+
+}
+
+.historial-incidencias {
+
+
+  border: 1px solid black;
+  width: 550px;
+  height: 650px;
+
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+
+
+.botones {
+
+  margin-bottom: 15px;
+
+}
+
+@media screen and (max-width: 1085px) {
+main{
+
+  gap: 0px;
+
+}
+
+}
+
+@media screen and (max-width: 850px) {
+  
+
+  .usuario2 {
+
+    position: absolute;
+    text-align: center;
+    right: 20px;
+
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    top: 10px;
+  }
+
+  .container-credentials-username {
+    margin-top: 8px;
+    right: 21%;
+    position: absolute;
+  }
+
+  .img_usuario {
+
+
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 20px;
+  
+  
+  
+  
+    background-image: url(../imágenes/perfil.webp);
+    background-repeat: no-repeat;
+    background-size: 40px;
+  
+  }
+
+  .titulo-encabezado {
+    padding-left: 15px;
+    margin-top: 15px;
+  }
+
+ 
+
+  
+
+  #incidencia {
+    padding-left: 5px;
+    padding-top: 5px;
+    height: 150px;
+    margin-top: 10px;
+    
+  }
+
+  .tablets-alumno2 {
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .texto_Container{
+
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 812px) {
+
+  main {
+
+
+    justify-content: space-around;
+    gap: 0px;
+
+  }
+
+  footer {
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+
+  
+
+  
+
+
+  .usuario2 {
+
+
+    width: 100%;
+
+  }
+
+  .usuario2 {
+
+    position: absolute;
+    text-align: center;
+    right: 20px;
+
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    top: 10px;
+  }
+
+  .img_usuario {
+
+
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 20px;
+  
+  
+  
+  
+    background-image: url(../imágenes/perfil.webp);
+    background-repeat: no-repeat;
+    background-size: 40px;
+  
+  }
+
+
+
+
+
+
+
+  @media screen and (max-width: 587px) {
+
+    main {
+
+
+      justify-content: space-around;
+      gap: 0px;
+  
+    }
+
+    .img_usuario {
+  
+  
+      border-radius: 10%;
+      width: 40px;
+      height: 40px;
+      float: right;
+      margin-top: 20px;
+    
+    
+    
+    
+      background-image: url(../imágenes/perfil.webp);
+      background-repeat: no-repeat;
+      background-size: 40px;
+    
+    }
+
+    .usuario2 {
+
+      position: absolute;
+      text-align: center;
+     
+      
+      font-size: 25px;
+      width: 150px;
+      height: 100px;
+      top: 10px;
+    }
+  
+    .usuario2 {
+
+
+      width: 100%;
+
+    }
+
+    header {
+
+      width: 100%;
+
+
+
+    }
+
+    
+
+   
+
+    
+
+  }
+}
+
+
+@media screen and (max-width: 587px) {
+  #miFormulario label {
+      font-size: 80%;
+  }
+
+  
+}
+
+@media screen and (max-width: 864px) {
+
+  .incidencias{
+
+    overflow: scroll;
+
+
+  }
+
+  .titulo-encabezado{
+
+    font-size: 20px;
+
+  }
+  .incidencia{
+
+    font-size: 20px;
+  }
+
+}
+
