@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página alumno</title>
+    <link rel="stylesheet" href="./style_pagAdmin.css">
+    <script defer src="./script_pagAdmin.js"></script>
+
+<body>
+    <header>
+        <h1 class="titulo-encabezado">Admin</h1>
+        <div class="usuario2">
+            <div class="img_usuario"></div>
+            <div class="container-credentials-username">
+                <span class="texto-usuario" href="#">Mi usuario</span>
+                <ul class="submenu">
+                    <li><a class="desplegable" href="#">Mis datos</a></li>
+                    <li><a class="desplegable" href="#">Seguridad de la cuenta</a></li>
+                    <li><a class="desplegable" href="../index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+                    
+
+        </div>
+    </header>
+
+
+    <main>
+        <div class="tablets-alumno">
+            <div class="tablets-alumno2">Alumnos</div>
+        </div>
+
+        <div class="crear-incidencia">
+            <div class=" crear-incidencia2">
+                Crear incidencia
+            </div>
+            <form id="miFormulario" onsubmit="mostrarMensajeConfirmacion()" class="" action="">
+                <label>Nombre del alumno</label>
+                <input type="text" id="nombre">
+                <label>Modelo de la tablet</label>
+                <input type="text" id="modelo">
+                <p class="incidencia">Describa la incidencia detalladamente
+                    <textarea name="" id="incidencia" cols="30" rows="10">
+                    </textarea>
+                </p>
+                <input class="botones" name="Enviar" value="Enviar" type="submit">
+                <input class="botones" type="reset" text="Reiniciar">
+            </form>
+
+
+            </form>
+        </div>
+
+        <div class="historial-incidencias">
+            <div class="historial-incidencias1">Historial Incidencias</div>
+            <div class="" id="incidencias">
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
