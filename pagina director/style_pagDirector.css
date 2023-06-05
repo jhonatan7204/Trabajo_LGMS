@@ -75,14 +75,6 @@ footer {
 
 }
 
-.titulo-encabezado{
-
-  padding-left: 20px;
-  
-  
-
-}
-
 .texto-usuario {
 
   margin-top: 15px;
@@ -90,17 +82,18 @@ footer {
   text-decoration: none;
 
 }
-.clase{
-
-text-align: center;
-
-}
 
 .container-credentials-username a {
   text-decoration: none;
 }
 
+.titulo-encabezado {
 
+  padding-left: 20px;
+  margin-top: 15px;
+  font-size: 30px;
+
+}
 
 .tablets-alumno {
 
@@ -207,6 +200,12 @@ text-align: center;
   height: 100px;
   top: 10px;
 
+
+
+
+
+
+
 }
 
 
@@ -216,7 +215,9 @@ text-align: center;
   margin-bottom: 20px;
   margin-left: 131px;
   border-bottom: 1px solid black;
-                
+
+
+
 }
 
 .desplegable {
@@ -225,37 +226,44 @@ text-align: center;
 
 }
 
-.container{
 
-  width: 70%;
-  height: 700px;
-  align-items: center;
-  margin: 20px 0; 
+
+
+.crear-incidencia {
+
+
+  border: 1px solid black;
+  width: 550px;
+  height: 650px;
+
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+
 
 }
 
+.crear-incidencia2 {
 
+
+
+  width: 320px;
+  text-align: center;
+
+  border-bottom: 2px solid black;
+  margin: 15px auto;
+
+
+
+}
 
 .incidencias {
 
   border: 1px solid black;
   height: 88%;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  
-
-
-}
-
-.incidencia{
-
-
-  font-size: 30px;
-  
-  
-
+  text-align: center;
 
 }
 
@@ -269,12 +277,58 @@ text-align: center;
 
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-right: 20px;
   text-align: center;
   font-size: 30px;
 
 }
 
+.historial-incidencias1 {
 
+
+
+  width: 320px;
+  text-align: center;
+
+  border-bottom: 2px solid black;
+  margin: 15px auto;
+
+
+
+
+
+}
+
+form {
+
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+
+form>input {
+
+  width: 190px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 5px;
+  padding-left: 5px;
+
+
+}
+
+#incidencia {
+
+  padding-left: 5px;
+  padding-top: 5px;
+
+}
 
 .botones {
 
@@ -301,8 +355,8 @@ main{
     right: 20px;
 
     font-size: 25px;
-    width: 300px;
-    height: 100px;
+    width: 520px;
+    height: 650px;
     top: 10px;
   }
 
@@ -335,16 +389,37 @@ main{
     margin-top: 15px;
   }
 
- 
+  .tablets-alumno {
+    border: 1px solid black;
+    width: 520px;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    flex-basis: 50%;
+    order: 1;
+    
+  }
 
-  
+  .crear-incidencia {
+    border: 1px solid black;
+    width: 520px;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 3%;
+    
+    
+    
+  }
 
   #incidencia {
     padding-left: 5px;
     padding-top: 5px;
     height: 150px;
     margin-top: 10px;
-    
   }
 
   .tablets-alumno2 {
@@ -356,26 +431,36 @@ main{
     margin-top: 10px;
   }
 
-  .texto_Container{
-
-    text-align: center;
+  .tablets-alumno {
+    float: right;
   }
+
+  .historial-incidencias {
+    border: 1px solid black;
+    width: 520px;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 3%;
+    order: 2;
+    
+  }
+
+
+
+
+
+
+
+
 
 }
 
-
-
-
-
 @media screen and (max-width: 812px) {
 
-  main {
-
-
-    justify-content: space-around;
-    gap: 0px;
-
-  }
+  
 
   footer {
     background-size: 100% 100%;
@@ -384,7 +469,11 @@ main{
 
   
 
-  
+  .tablets-alumno {
+
+    width: 35%;
+
+  }
 
 
   .usuario2 {
@@ -424,21 +513,20 @@ main{
   
   }
 
+  @media screen and (max-width: 587px) {
 
 
+      main{
 
+        flex-direction: column;
+      }
 
+  }
 
 
   @media screen and (max-width: 587px) {
 
-    main {
-
-
-      justify-content: space-around;
-      gap: 0px;
-  
-    }
+    
 
     .img_usuario {
   
@@ -470,6 +558,14 @@ main{
       top: 10px;
     }
   
+    
+
+
+    
+
+    
+
+
     .usuario2 {
 
 
@@ -485,11 +581,27 @@ main{
 
     }
 
+    .tablets-alumno2 {
+
+      font-size: 20px;
+      width: 80%;
+
+    }
+
     
 
-   
+    form>input {
 
-    
+      width: 80%;
+    }
+
+    form>.botones {
+
+      width: 50%;
+
+    }
+
+
 
   }
 }
@@ -500,27 +612,10 @@ main{
       font-size: 80%;
   }
 
-  
-}
-
-@media screen and (max-width: 864px) {
-
   .incidencias{
 
-    overflow: scroll;
-
-
+    flex-direction: column;
   }
 
-  .titulo-encabezado{
-
-    font-size: 20px;
-
-  }
-  .incidencia{
-
-    font-size: 20px;
-  }
-
+  
 }
-
