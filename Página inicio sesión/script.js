@@ -178,21 +178,17 @@ const boton = document.querySelector("#btn");
 function validar(){
     let desabilitar = false;
 
-    if(form.txt_1.value == ""){
+    if(form.txt_1.value == "" || form.txt_2.value == ""){
         desabilitar = true;
-    }
-    if(form.txt_2.value == ""){
-        desabilitar = true;
-    }
-    if(desabilitar == true){
+    }    
+    if(desabilitar == false){
         boton.disabled = true;
         document.getElementById("btn").style.background = "linear-gradient(150deg, rgb(255, 255, 255)30%, rgb(255, 255, 255)70%)";
         document.getElementById("btn").style.color = "black";
         document.getElementById("btn").style.height = "200px";
         document.getElementById("btn").style.cursor = "pointer";
     } else{
-        boton.disabled = false; 
-        
+        document.getElementById("btn").style.cssText = "";
     }
 }
 
