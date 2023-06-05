@@ -169,6 +169,23 @@ tablet.gethistorialIncidencias();
 
 tablet.mostrarTablet();
 
+function habilitar(){
+    txt_1 = document.getElementById("txt_1").value;
+    txt_2 = document.getElementById("txt_2").value;
+    val = 0;
+
+    if(txt_1 == ""){
+        val++;
+    }
+    if(txt_2 == ""){
+        val++;
+    }
+
+    if(val == 0){
+        document.getElementById("btn").disable = false;
+    }
+}
+
 /*
 let alumno1 = new Alumno("74394272J","Andres",33,"1ºDAN","Tablet_ejemplo");
 
