@@ -158,17 +158,6 @@ class Tablet{
 
 }
 
-let alumno = new Alumno("12345678", "Andrés", 16, "1ºDAM", "Tablet1");
-let historialIncidencias = ["Escupitajo", "Destrozo", "Se descargó tik tok"];
-
-
-let tablet = new Tablet("Tablet1", alumno, historialIncidencias);
-
-tablet.agregarIncidencia("afasdfas");
-tablet.gethistorialIncidencias();
-
-tablet.mostrarTablet();
-
 /* habilitar botón y enlazar */
 
 

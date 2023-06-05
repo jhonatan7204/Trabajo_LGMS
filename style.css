@@ -136,12 +136,12 @@ footer {
     }
 
     .contenedor-botones{
-        flex-direction: column;
+        width: 82px;
     }
 
     .boton{
         width: 60px;
-        height: 35px;
+        height: 50px;
     }
 
     main {

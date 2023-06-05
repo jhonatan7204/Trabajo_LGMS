@@ -54,6 +54,12 @@ main {
   gap: 100px;
 }
 
+.lista{
+  background-color: white;
+  height: 86%;
+  font-size: 10px;
+}
+
 
 .tarjeta-acceso {
   width: 100%;
@@ -112,11 +118,6 @@ footer {
   height: 650px;
   margin-top: 20px;
   margin-bottom: 20px;
-
-
-
-
-
 }
 
 .tablets-alumno2 {
@@ -126,8 +127,6 @@ footer {
   border-bottom: 2px solid black;
   margin-left: 45px;
   margin-top: 10px;
-
-
 }
 
 
@@ -140,8 +139,6 @@ footer {
 
 
 .img_usuario {
-
-
   border-radius: 10%;
   width: 40px;
   height: 40px;
