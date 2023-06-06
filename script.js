@@ -173,7 +173,7 @@ class Alumno extends Persona {
     this.tabletAsignada = tabletAsignada;
   }
 
-  darNumeroIncidencia(){
+  darNumeroIncidencia() {
     let numero = this.getTabletAsignada().getListaIncidencias().length;
     return numero;
   }
@@ -258,6 +258,22 @@ class Clase {
   setProfesorEncargado(profesorEncargado) {
     this.profesorEncargado = profesorEncargado;
   }
+
+  devolverPorcentaje() {
+    let sumaEdades = 0;
+    const listaAlumnos = this.getListaAlumnos();
+    
+    for (let j = 0; j < listaAlumnos.length; j++) {
+      sumaEdades += listaAlumnos[j].getEdad();
+    }
+  
+    const promedioEdades = sumaEdades / listaAlumnos.length;
+    const porcentaje = (promedioEdades / 100) * 100;
+  
+    return porcentaje.toFixed(2);
+  }
+
+  
 }
 
 class Director extends Persona {
@@ -369,10 +385,116 @@ function main() {
   asignarClases();
   crearDirector();
 
-  console.log(director.mostrarDirector());
-
-  let texto3 = alumno.getTabletAsignada().getTabletAsignada().getListaIncidencias().devolverIncidencias();
 }
+
+function estadisticasIncidencias() {
+  let textoInc = "";
+  let numAlumnos = indiceTablet;
+  let CeroInc = 0;
+  let UnoInc = 0;
+  let DosInc = 0;
+  let TresInc = 0;
+  let CuatroInc = 0;
+
+  for (let i = 0; i < listaAlumnos.length; i++) {
+    for (let j = 0; j < listaAlumnos[i].length; j++) {
+      if (listaAlumnos[i][j].getTabletAsignada().getListaIncidencias().length === 0) {
+        CeroInc += 1;
+      } else if (listaAlumnos[i][j].getTabletAsignada().getListaIncidencias().length === 1) {
+        UnoInc += 1;
+      } else if (listaAlumnos[i][j].getTabletAsignada().getListaIncidencias().length === 2) {
+        DosInc += 1;
+      } else if (listaAlumnos[i][j].getTabletAsignada().getListaIncidencias().length === 3) {
+        TresInc += 1;
+      } else {
+        CuatroInc += 1;
+      }
+    }
+  }
+
+  let ptjCero = (CeroInc / numAlumnos) * 100;
+  let ptjUno = (UnoInc / numAlumnos) * 100;
+  let ptjDos = (DosInc / numAlumnos) * 100;
+  let ptjTres = (TresInc / numAlumnos) * 100;
+  let ptjCuatro = (CuatroInc / numAlumnos) * 100;
+
+  textoInc += "\n Porcentaje de alumnos con 0 incidencias -> " + ptjCero.toFixed(2);
+  textoInc += "\n Porcentaje de alumnos con 1 incidencias -> " + ptjUno.toFixed(2);
+  textoInc += "\n Porcentaje de alumnos con 2 incidencias -> " + ptjDos.toFixed(2);
+  textoInc += "\n Porcentaje de alumnos con 3 incidencias -> " + ptjTres.toFixed(2);
+  textoInc += "\n Porcentaje de alumnos con 4 incidencias -> " + ptjCuatro.toFixed(2);
+
+  console.log(ptjCero.toFixed(2));
+  console.log(ptjUno.toFixed(2));
+  console.log(ptjDos.toFixed(2));
+  console.log(ptjTres.toFixed(2));
+  console.log(ptjCuatro.toFixed(2));
+
+  /*----------------------------------------------------------------*/
+
+  let claseTemporal = "";
+  let numeroTemporal = 1;
+  for (let i = 0; i < listaClases.length; i++) {
+    if (listaClases[i].getListaAlumnos().length > numeroTemporal) {
+       claseTemporal = listaClases[i].getNombreClase();
+       numeroTemporal = listaClases[i].getListaAlumnos().length;
+    }
+  }
+
+  console.log("La clase con más alumnos es la de " + claseTemporal + " con " + numeroTemporal);
+  textoInc += "La clase con más alumnos es la de " + claseTemporal + " con " + numeroTemporal;
+
+    /*----------------------------------------------------------------*/
+
+    let claseTemporal2 = "";
+    let numeroTemporal2 = 27;
+    for (let i = 0; i < listaClases.length; i++) {
+      if (listaClases[i].getListaAlumnos().length < numeroTemporal2) {
+         claseTemporal2 = listaClases[i].getNombreClase();
+         numeroTemporal2 = listaClases[i].getListaAlumnos().length;
+      }
+    }
+  
+    console.log("La clase con menos alumnos es la de " + claseTemporal2 + " con " + numeroTemporal2);
+    textoInc += "\nLa clase con menos alumnos es la de " + claseTemporal2 + " con " + numeroTemporal2;
+
+    /*----------------------------------------------------------------*/
+
+    let claseTemporal3 = "";
+    let numeroTemporal3 = 0;
+    
+    for (let i = 0; i < listaClases.length; i++) {
+      const porcentaje = listaClases[i].devolverPorcentaje();
+      
+      if (porcentaje > numeroTemporal3) {
+        claseTemporal3 = listaClases[i].getNombreClase();
+        numeroTemporal3 = porcentaje;
+      }
+    }
+    
+    console.log("La clase con los alumnos más mayores es " + claseTemporal3 + " con una media de " + numeroTemporal3 + "%");
+    textoInc += "\nLa clase con los alumnos más mayores es " + claseTemporal3 + " con una media de " + numeroTemporal3+ "%";
+
+        /*----------------------------------------------------------------*/
+
+        let claseTemporal4 = "";
+        let numeroTemporal4 = 27;
+        
+        for (let i = 0; i < listaClases.length; i++) {
+          const porcentaje = listaClases[i].devolverPorcentaje();
+          
+          if (porcentaje < numeroTemporal4) {
+            claseTemporal4 = listaClases[i].getNombreClase();
+            numeroTemporal4 = porcentaje;
+          }
+        }
+        
+        console.log("La clase con los alumnos más jóvenes es " + claseTemporal4 + " con una media de " + numeroTemporal4 + "%");
+        textoInc += "\nLa clase con los alumnos más jóvenes es " + claseTemporal4 + " con una media de " + numeroTemporal4 + "%";
+
+        return textoInc;
+  }
+
 
 function rolearDatos() {
   inicializarClases();
@@ -396,7 +518,7 @@ function crearDirector() {
 
 function inicializarClases() {
   for (let i = 0; i < listaAlumnos.length; i++) {
-    const numAlumnos = rng.nextInt(10, 21);
+    const numAlumnos = rng.nextInt(10, 25);
     listaAlumnos[i] = new Array(numAlumnos);
   }
 }

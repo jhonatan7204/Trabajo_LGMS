@@ -1,24 +1,40 @@
-function mostrarMensajeConfirmacion() {
+for (let i = 0; i < listaClases.length; i++) {
+      texto = "Alumnos de la clase " + listaClases[i].getNombreClase() + ": \n";
     
-      alert("Formulario enviado correctamente.");
+      let contenedor = document.querySelector(".alumnos");
+      contenedor.innerText += texto;
     
-  }
+      for (let j = 0; j < listaClases[i].getListaAlumnos().length; j++) {
+        texto = listaClases[i].getListaAlumnos()[j].getNombre() + " " + listaClases[i].getListaAlumnos()[j].getCurso()+ "\n";
+    
+        let contenedor = document.querySelector(".alumnos");
+        contenedor.innerText += texto;
+     
+      }
+}
 
-  var formulario = document.getElementById('miFormulario');
-  formulario.addEventListener('submit',function(event) {
+let profRandom = rng.nextInteger(profesores.length);
+let profesor = profesores[profRandom];
+
+for (let i = 0; i < profesor.getListaAlumnos().length; i++) {
+
+      let numeroIncidencia = profesor.getListaAlumnos()[i].darNumeroIncidencia();  
     
-        event.preventDefault(); // Evitamos el envío del formulario
+      let texto = profesor.getListaAlumnos()[i].getNombre() + " " + profesor.getListaAlumnos()[i].getApellidos() 
+      + "-> Tablet id: " + profesor.getListaAlumnos()[i].getTabletAsignada().getIdTablet() + ", número de incidencias: " + numeroIncidencia + "\n"; 
       
-        // Obtenemos los valores de los campos del formulario
-        var nombre = document.getElementById('nombre').value;
-        var modelo = document.getElementById('modelo').value;
-        var incidencia = document.getElementById('incidencia').value;
+      let contenedor = document.querySelector(".incidencia");
+      contenedor.innerText += texto;
+    }
+
+
+    let textoInc = estadisticasIncidencias() ;
       
-        var incidencias = document.getElementById('incidencias');
-        incidencias.textContent = nombre + " " + modelo+ " " + incidencia;
-        this.reset();
-        
-});
+    let contenedor = document.querySelector(".estadisticas");
+    contenedor.innerText += textoInc;
+
+
+
 
   
   

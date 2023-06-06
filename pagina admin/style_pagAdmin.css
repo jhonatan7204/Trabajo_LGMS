@@ -63,6 +63,21 @@ main {
   max-width: 320px;
 }
 
+.alumnos{
+  color: white;
+  text-shadow: 0 0 10px  black;
+}
+
+.incidencia{
+  color: white;
+  text-shadow: 0 0 10px  black;
+}
+
+.estadisticas{
+  color: white;
+  text-shadow: 0 0 10px  black;
+}
+
 /* ↓ Footer ↓ */
 
 footer {
@@ -113,6 +128,8 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 
+  overflow-y: scroll;
+  overflow-x: hidden;
 
 
 
@@ -250,8 +267,11 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
 
 }
 
@@ -288,7 +308,11 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
+
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
 
 }
 
@@ -420,6 +444,7 @@ main{
     margin-right: 2%;
     flex-basis: 50%;
     order: 1;
+    font-size: 20px;
     
   }
 
@@ -447,7 +472,7 @@ main{
   .tablets-alumno2 {
     width: 200px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border-bottom: 2px solid black;
     margin-left: 20px;
     margin-top: 10px;
