@@ -113,9 +113,10 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 
+  overflow-y: auto;
+  overflow-x: hidden;
 
-
-
+ 
 
 }
 
@@ -130,6 +131,12 @@ footer {
 
 }
 
+.pergamino{
+  padding: 20px;
+  color: white;
+  text-shadow: 0 0 10px  black;
+  
+}
 
 
 .container-credentials-username {
@@ -275,6 +282,16 @@ footer {
   height: 88%;
   text-align: center;
 
+
+
+}
+
+#incidencias{
+  padding: 10px;
+  color: white;
+  text-shadow: 0 0 10px  black;
+  margin-bottom: 10px;
+  
 }
 
 .historial-incidencias {
@@ -284,11 +301,14 @@ footer {
   width: 550px;
   height: 650px;
 
-
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 30px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+
 
 }
 
@@ -301,10 +321,6 @@ footer {
 
   border-bottom: 2px solid black;
   margin: 15px auto;
-
-
-
-
 
 }
 

@@ -254,20 +254,15 @@ text-align: center;
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  
 
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-}
-
-.incidencia{
-
-
-  font-size: 30px;
-  
-  
-
+  color: white;
+  text-shadow: 0 0 10px  black;
 
 }
+
 
 .historial-incidencias {
 

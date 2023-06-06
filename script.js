@@ -173,6 +173,11 @@ class Alumno extends Persona {
     this.tabletAsignada = tabletAsignada;
   }
 
+  darNumeroIncidencia(){
+    let numero = this.getTabletAsignada().getListaIncidencias().length;
+    return numero;
+  }
+
   mostrarAlumno() {
     let linea = "Alumno de la clase " + this.curso
       + "\n" + super.mostrarDatos()
@@ -338,7 +343,7 @@ const apellidos = [
   "Ventura", "Proctor", "Corey", "Hathorne", "GoodMan"
 ];
 const incidencias = [
-  "Escupitajo", "Rotura de Cristal", "Malware", "Siniestro", "Robo de tablet", "Tráfico de tablet",
+  "Mojada", "Rotura de Cristal", "Malware", "Siniestro", "Robo de tablet", "Tráfico de tablet",
   "Tablet arrojada", "Mal funcionamiento", "Tablet perdida", "Tablet machacada", "Partida en 1000 pedazos"
 ];
 
@@ -365,6 +370,8 @@ function main() {
   crearDirector();
 
   console.log(director.mostrarDirector());
+
+  let texto3 = alumno.getTabletAsignada().getTabletAsignada().getListaIncidencias().devolverIncidencias();
 }
 
 function rolearDatos() {
